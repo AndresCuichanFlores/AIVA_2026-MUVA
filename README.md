@@ -10,3 +10,39 @@ El proyecto contempla el desarrollo de un **prototipo funcional** capaz de detec
 ![img.png](img.png)
 
 
+## Mockup del sistema principal
+
+El siguiente mockup muestra una posible interfaz del sistema de detección y reconocimiento automático de matrículas utilizado desde un vehículo policial.
+
+```text
++------------------------------------------------------+
+| SISTEMA DE DETECCIÓN DE MATRÍCULAS - VEHÍCULO POLICIAL |
++------------------------------------------------------+
+
+INTERFAZ
+--------------------------------------------------------
+|                                                      |
+|                                                      |
+|            [ Imagen capturada del vehículo ]         |
+|                                                      |
+|                                                      |
+|                                                      |
+|           Matrícula detectada: 1234 ABC              |
+|           Nivel de confianza: 92 %                   |
+|                                                      |
+--------------------------------------------------------
+
+Información del vehículo
+--------------------------------------------------------
+Vehículo robado:        ❌ No
+Multas pendientes:      ⚠️ Sí
+ITV vigente:            ❌ No
+--------------------------------------------------------
+
+Estado del sistema
+--------------------------------------------------------
+Dispositivo: Raspberry Pi
+Modelo de detección: YOLO / OCR
+Base de datos: Vehículos e incidencias
+--------------------------------------------------------
+```
