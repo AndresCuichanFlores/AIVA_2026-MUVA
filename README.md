@@ -133,30 +133,7 @@ El objetivo principal del proyecto es demostrar el despliegue de un sistema func
 
 ---
 
-# Mockup del sistema principal
 
-El siguiente mockup muestra una posible interfaz simplificada del sistema:
-
-```text
-+------------------------------------------------+
-| SISTEMA DE DETECCIÓN DE MATRÍCULAS - POLICÍA  |
-+------------------------------------------------+
-
-[ Imagen capturada del vehículo ]
-
-Matrícula detectada: 1234 ABC
-
-Información del vehículo:
-- Marca: TESLA
-- Vehículo robado: No
-- ITV vigente: Sí
-
-Estado del sistema:
-- Dispositivo: Raspberry Pi 5
-- Modelo IA: YOLO + OCR
-```
-
----
 
 # Requisitos previos
 
