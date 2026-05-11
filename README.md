@@ -113,3 +113,306 @@ Este archivo de test incluye varias pruebas: una centrada en la detección de ma
 reconocimiento de texto mediante OCR, y una última que valida el flujo completo del sistema, desde la detección hasta 
 el reconocimiento final de la matrícula. De este modo, se asegura que tanto los módulos individuales como la integración 
 entre ellos funcionan correctamente.
+
+# Sistema funcional de Raspberry Pi 5
+
+## Autores
+
+- TAREF BILEL SEIFEDDINE
+- FLAVIO ANDRES CUICHAN FLORES
+
+---
+
+# Introducción
+
+Este proyecto desarrolla un sistema de Detección y Reconocimiento Automático de Matrículas (ALPR) orientado a su uso desde un vehículo policial. El sistema utiliza técnicas de visión artificial y aprendizaje profundo para identificar matrículas de vehículos capturadas mediante una cámara instalada en el coche patrulla.
+
+El procesamiento se ejecuta sobre una Raspberry Pi 5, que actúa como unidad principal de captura y análisis de imágenes. Una vez detectada y reconocida la matrícula, el sistema puede mostrar información asociada al vehículo procesado.
+
+El objetivo principal del proyecto es demostrar el despliegue de un sistema funcional de visión artificial utilizando Raspberry Pi y Python.
+
+---
+
+# Mockup del sistema principal
+
+El siguiente mockup muestra una posible interfaz simplificada del sistema:
+
+```text
++------------------------------------------------+
+| SISTEMA DE DETECCIÓN DE MATRÍCULAS - POLICÍA  |
++------------------------------------------------+
+
+[ Imagen capturada del vehículo ]
+
+Matrícula detectada: 1234 ABC
+
+Información del vehículo:
+- Marca: TESLA
+- Vehículo robado: No
+- ITV vigente: Sí
+
+Estado del sistema:
+- Dispositivo: Raspberry Pi 5
+- Modelo IA: YOLO + OCR
+```
+
+---
+
+# Requisitos previos
+
+## Hardware necesario
+
+- Raspberry Pi 5
+- Tarjeta microSD con Raspberry Pi OS
+- TV o monitor
+- Cable HDMI
+- Ratón USB
+- Cargador USB-C
+- Memoria USB
+- Portátil Linux/Ubuntu
+
+---
+
+# Librerías utilizadas
+
+El proyecto utiliza principalmente:
+
+- ultralytics (YOLO)
+- easyocr
+- opencv-python
+- numpy
+- torch
+- torchvision
+- pytest
+
+---
+
+# Instalación de dependencias
+
+Instalar las dependencias ejecutando:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Cómo clonar el repositorio
+
+```bash
+git clone https://github.com/AndresCuichanFlores/AIVA_2026-MUVA.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd AIVA_2026-MUVA
+```
+
+---
+
+# Despliegue estándar en Raspberry Pi 5
+
+## 1. Conexión del hardware
+
+Conectar:
+
+- Raspberry Pi 5
+- HDMI a TV/monitor
+- Ratón USB
+- Alimentación USB-C
+
+---
+
+## 2. Inicio del sistema
+
+Al conectar la alimentación, Raspberry Pi OS arrancará automáticamente.
+
+---
+
+## 3. Configuración WiFi
+
+Desde el escritorio:
+
+- seleccionar la red WiFi
+- introducir contraseña
+- confirmar conexión
+
+En caso de no disponer de teclado físico, se puede utilizar el teclado virtual:
+
+```text
+Squeekboard
+```
+
+---
+
+## 4. Transferencia del proyecto
+
+El proyecto puede copiarse desde un portátil Linux mediante una memoria USB.
+
+Ejemplo de ruta del proyecto:
+
+```bash
+/home/alumno/Bilel_Andres/AIVA_2026-MUVA
+```
+
+---
+
+# Creación del entorno virtual
+
+Entrar al proyecto:
+
+```bash
+cd ~/Bilel_Andres/AIVA_2026-MUVA
+```
+
+Crear entorno virtual:
+
+```bash
+python3 -m venv venv
+```
+
+Activar entorno virtual:
+
+```bash
+source venv/bin/activate
+```
+
+Si funciona correctamente aparecerá:
+
+```bash
+(venv)
+```
+
+---
+
+# Instalación de dependencias en Raspberry Pi
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Ejecución del proyecto
+
+Acceder al directorio principal:
+
+```bash
+cd system
+```
+
+Ejecutar aplicación:
+
+```bash
+python3 main.py
+```
+
+---
+
+# Ejecución de tests
+
+Para ejecutar las pruebas:
+
+```bash
+python -m pytest
+```
+
+o:
+
+```bash
+python -m pytest test_detection_and_recognition.py
+```
+
+---
+
+# Estructura del proyecto
+
+```text
+AIVA_2026-MUVA/
+│
+├── system/
+├── tests/
+├── requirements.txt
+├── README.md
+└── venv/
+```
+
+---
+
+# Diagrama UML del despliegue estándar
+
+El sistema sigue el siguiente despliegue:
+
+```text
++-------------------+
+| Portátil Linux    |
+| Proyecto Python   |
++-------------------+
+          |
+          | USB
+          v
++------------------------+
+| Raspberry Pi 5         |
+| Raspberry Pi OS        |
+| Python + venv          |
+| Aplicación principal   |
++------------------------+
+          |
+          | HDMI
+          v
++-------------------+
+| TV / Monitor      |
++-------------------+
+```
+
+---
+
+# Posibles errores comunes
+
+## Dependencias faltantes
+
+Ejecutar nuevamente:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Error del entorno virtual
+
+Recrear entorno virtual:
+
+```bash
+python3 -m venv venv
+```
+
+---
+
+## Error de ruta
+
+Comprobar que el proyecto fue extraído correctamente.
+
+---
+
+# Finalización de la aplicación
+
+Para detener la ejecución:
+
+```bash
+Ctrl + C
+```
+
+---
+
+# Tecnologías utilizadas
+
+- Raspberry Pi OS
+- Python 3
+- Raspberry Pi 5
+- OpenCV
+- YOLO
+- OCR
+- Linux/Ubuntu
+- Entornos virtuales Python
